@@ -3,15 +3,16 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/vue3-skeleton.umd.cjs",
-  "module": "./dist/vue3-skeleton.js",
+  "main": "./dist/vue3-skeleton.umd.js",
+  "module": "./dist/vue3-skeleton.es.js",
   "exports": {
     ".": {
-      "import": "./dist/vue3-skeleton.js",
-      "require": "./dist/vue3-skeleton.umd.cjs"
+      "import": "./dist/vue3-skeleton.es.js",
+      "require": "./dist/vue3-skeleton.umd.js"
     }
   },
-  "version": "1.0.2",
+  "types": "./dist/types/index.d.ts",
+  "version": "1.0.3",
   "type": "module",
   "repository": {
     "type": "git",
@@ -20,13 +21,14 @@
   "homepage": "https://github.com/ndt-pro/vue3-skeleton",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
+    "build": "vite build && vue-tsc --emitDeclarationOnly && mv dist/src dist/types",
     "preview": "vite preview"
   },
   "dependencies": {
     "vue": "^3.2.41"
   },
   "devDependencies": {
+    "@types/node": "^18.11.10",
     "@vitejs/plugin-vue": "^3.2.0",
     "typescript": "^4.6.4",
     "vite": "^3.2.3",

@@ -1,6 +1,10 @@
 # Vue3-Skeleton
 
-> Loader showing skeleton view while data is being loaded to improve UX.
+> This is a package based on the source code of [Abdulqudus001](https://github.com/Abdulqudus001). See original code at [Here](https://github.com/abdulqudus001/vue-skeleton-loader)
+
+## :grey_question: What's new?
+
+-  TypeScript + Vue3 Supported
 
 ![Sample loader](https://res.cloudinary.com/ibnabubakre/image/upload/v1594505356/loader.gif)
 
@@ -20,10 +24,10 @@ You can import and register the component globally in your main.js, or import an
 ```javascript
 import Vue from 'vue';
 // Import the component
-import Vue3Skeleton from '@ndtpro/vue3-skeleton';
+import { Vue3Skeleton } from '@ndtpro/vue3-skeleton';
 
 // Register the component globally
-Vue.component('vue3-skeleton', Vue3Skeleton);
+Vue.component('Vue3Skeleton', Vue3Skeleton);
 ```
 
 **Vue3: To register in your `main.js`**
@@ -32,12 +36,12 @@ Vue.component('vue3-skeleton', Vue3Skeleton);
 import { createApp } from 'vue';
 
 // Import the component
-import Vue3Skeleton from '@ndtpro/vue3-skeleton';
+import { Vue3Skeleton } from '@ndtpro/vue3-skeleton';
 
 const app = createApp({});
 
 // Register the component globally
-app.component('vue3-skeleton', Vue3Skeleton);
+app.component('Vue3Skeleton', Vue3Skeleton);
 ```
 
 **To register in your component**
@@ -55,7 +59,8 @@ app.component('vue3-skeleton', Vue3Skeleton);
 
 ```vue
 <template>
-	<Vue3Skeleton type="square" :width="300" :height="100" animation="wave" />
+	<Vue3Skeleton type="circle" :size="100" animation="fade" />
+	<Vue3Skeleton type="rect" :width="300" :height="100" />
 </template>
 ```
 

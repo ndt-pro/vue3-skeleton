@@ -1,13 +1,15 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
+import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
 	build: {
 		lib: {
-			entry: './vue3-skeleton/main.js',
+			entry: path.resolve(__dirname, 'src/index.ts'),
 			name: 'Vue3-Skeleton',
-			fileName: 'vue3-skeleton',
+			// fileName: 'vue3-skeleton',
+			fileName: (format) => `vue3-skeleton.${format}.js`,
 		},
 		rollupOptions: {
 			external: ['vue'],
