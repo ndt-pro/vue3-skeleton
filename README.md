@@ -15,7 +15,7 @@
 
 You can import and register the component globally in your main.js, or import and use it in a particular component.
 
-**To register in your `main.js`**
+**Vue2: To register in your `main.js`**
 
 ```javascript
 import Vue from 'vue';
@@ -24,6 +24,20 @@ import Vue3Skeleton from '@ndtpro/vue3-skeleton';
 
 // Register the component globally
 Vue.component('vue3-skeleton', Vue3Skeleton);
+```
+
+**Vue3: To register in your `main.js`**
+
+```javascript
+import { createApp } from 'vue';
+
+// Import the component
+import Vue3Skeleton from '@ndtpro/vue3-skeleton';
+
+const app = createApp({});
+
+// Register the component globally
+app.component('vue3-skeleton', Vue3Skeleton);
 ```
 
 **To register in your component**
