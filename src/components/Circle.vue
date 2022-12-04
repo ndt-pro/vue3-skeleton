@@ -27,7 +27,7 @@ onMounted(() => {
 	const width =
 		typeof props.width === "number" ? `${props.width}px` : props.width;
 	const height =
-		typeof props.width === "number" ? `${props.height}px` : props.height;
+		typeof props.height === "number" ? `${props.height}px` : props.height;
 	const background = `${props.color}`;
 	let el = loader.value;
 	if (el) {

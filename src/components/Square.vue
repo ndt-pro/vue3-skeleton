@@ -44,7 +44,7 @@ const style = computed(() => {
 		width:
 			typeof props.width === "number" ? `${props.width}px` : props.width,
 		height:
-			typeof props.width === "number"
+			typeof props.height === "number"
 				? `${props.height}px`
 				: props.height,
 		"background-color": `${props.color}`,
@@ -57,7 +57,7 @@ onMounted(() => {
 	const width =
 		typeof props.width === "number" ? `${props.width}px` : props.width;
 	const height =
-		typeof props.width === "number" ? `${props.height}px` : props.height;
+		typeof props.height === "number" ? `${props.height}px` : props.height;
 	const background = `${props.color}`;
 	const borderRadius = props.rounded ? `${props.radius}px` : 0;
 	let el = loader.value;
