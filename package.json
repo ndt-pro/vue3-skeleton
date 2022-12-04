@@ -13,6 +13,11 @@
   },
   "version": "1.0.0",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ndt-pro/vue3-skeleton"
+  },
+  "homepage": "https://github.com/ndt-pro/vue3-skeleton",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
